@@ -1,13 +1,12 @@
 #! /bin/sh
-# $Id$
+# $Id: shunit2_test_macros.sh 299 2010-05-03 12:44:20Z kate.ward@forestent.com $
 # vim:et:ft=sh:sts=2:sw=2
 #
 # Copyright 2008 Kate Ward. All Rights Reserved.
 # Released under the LGPL (GNU Lesser General Public License)
-#
 # Author: kate.ward@forestent.com (Kate Ward)
 #
-# shUnit2 unit test for macros
+# shUnit2 unit test for macros.
 
 # load test helpers
 . ./shunit2_test_helpers

@@ -1,5 +1,5 @@
 #! /bin/sh
-# $Id$
+# $Id: shunit2_test_asserts.sh 312 2011-03-14 22:41:29Z kate.ward@forestent.com $
 # vim:et:ft=sh:sts=2:sw=2
 #
 # Copyright 2008 Kate Ward. All Rights Reserved.
@@ -110,6 +110,22 @@ testAssertNotNull()
 
   ( assertNotNull "${MSG}" 'x' >"${stdoutF}" 2>"${stderrF}" )
   th_assertTrueWithNoOutput 'not null, with msg' $? "${stdoutF}" "${stderrF}"
+
+  ( assertNotNull 'x"b' >"${stdoutF}" 2>"${stderrF}" )
+  th_assertTrueWithNoOutput 'not null, with double-quote' $? \
+      "${stdoutF}" "${stderrF}"
+
+  ( assertNotNull "x'b" >"${stdoutF}" 2>"${stderrF}" )
+  th_assertTrueWithNoOutput 'not null, with single-quote' $? \
+      "${stdoutF}" "${stderrF}"
+
+  ( assertNotNull 'x$b' >"${stdoutF}" 2>"${stderrF}" )
+  th_assertTrueWithNoOutput 'not null, with dollar' $? \
+      "${stdoutF}" "${stderrF}"
+
+  ( assertNotNull 'x`b' >"${stdoutF}" 2>"${stderrF}" )
+  th_assertTrueWithNoOutput 'not null, with backtick' $? \
+      "${stdoutF}" "${stderrF}"
 
   ( assertNotNull '' >"${stdoutF}" 2>"${stderrF}" )
   th_assertFalseWithOutput 'null' $? "${stdoutF}" "${stderrF}"

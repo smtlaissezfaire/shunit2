@@ -1,5 +1,5 @@
 #! /bin/sh
-# $Id$
+# $Id: shunit2_test.sh 322 2011-04-24 00:09:45Z kate.ward@forestent.com $
 # vim:et:ft=sh:sts=2:sw=2
 #
 # Copyright 2008 Kate Ward. All Rights Reserved.
@@ -70,8 +70,8 @@ cat <<EOF
 #
 
 # test run info
-shells="${shells}"
-tests="${tests}"
+shells: ${shells}
+tests: ${tests}
 EOF
 for key in ${env}; do
   eval "echo \"${key}=\$${key}\""
@@ -82,6 +82,7 @@ echo
 echo "# system info"
 echo "$ date"
 date
+echo
 
 echo "$ uname -mprsv"
 uname -mprsv
@@ -106,6 +107,7 @@ for shell in ${shells}; do
 #
 EOF
 
+  SHUNIT_SHELL=${shell}  # pass shell onto tests
   shell_name=`basename ${shell}`
   shell_version=`versions_shellVersion "${shell}"`
 

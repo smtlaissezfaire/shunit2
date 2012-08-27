@@ -1,4 +1,4 @@
-# $Id$
+# $Id: Makefile 72 2007-06-08 13:03:26Z sfsetse $
 
 PROG=shunit2
 

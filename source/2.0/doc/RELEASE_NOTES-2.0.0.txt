@@ -67,5 +67,5 @@ KNOWN BUGS AND ISSUES
 None.
 
 
-$Revision$
+$Revision: 41 $
 vim:spell

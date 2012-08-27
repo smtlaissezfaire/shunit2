@@ -50,5 +50,5 @@ assertNotSame([message,], unexpected, actual)
 failSame(message)
 failNotSame([message,] expected, actual)
 
-.. $Revision$
+.. $Revision: 75 $
 .. vim:syntax=rst

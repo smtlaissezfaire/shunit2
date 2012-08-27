@@ -1,5 +1,5 @@
 #! /bin/sh
-# $Id$
+# $Id: docbookPrep.sh 44 2007-04-10 20:23:18Z sfsetse $
 
 XML_VERSION='4.4'
 XML_FILE="docbook-xml-${XML_VERSION}"

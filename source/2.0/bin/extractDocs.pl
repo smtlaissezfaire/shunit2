@@ -1,5 +1,5 @@
 #! /usr/bin/perl
-# $Id$
+# $Id: extractDocs.pl 12 2007-02-18 03:31:14Z sfsetse $
 
 if(@ARGV != 1) {
    print "usage: $0 sourceFile\n";

@@ -10,4 +10,4 @@ problem showed up.
 assertTrue() just gives 'ASSERT:', nothing else :-(. others too?
 upd: assertNull() will give message passed, but nothing else useful :-(
 
-$Revision$
+$Revision: 228 $
